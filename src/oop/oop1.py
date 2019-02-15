@@ -22,3 +22,5 @@ class Vehicle:
     def __init__(self, flight_vehicle, ground_vehicle):
         self.flight_vehicle = flight_vehicle
         self.ground_vehicle = ground_vehicle
+
+
