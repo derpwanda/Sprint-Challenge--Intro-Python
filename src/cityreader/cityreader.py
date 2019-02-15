@@ -6,8 +6,16 @@ import csv
 class City:
     def __init__(self, name, latitude, longitude):
         self.name = name
-        self.latitude = latitude
-        self.longitude = longitude
+        self.lat = float(latitude)
+        self.lon = float(longitude)
+
+# https://www.codecademy.com/en/forum_questions/551c137f51b887bbc4001b73
+
+    def __repr__(self):
+        return f'<City: "{self.name}", {self.lat}, {self.lon}>'
+
+    # def __repr__(self):
+    #     return f'<City: "{self.name}", {self.lat}, {self.lon}>'
 
 
 # We have a collection of US cities with population over 750,000 stored in the
@@ -29,15 +37,24 @@ def cityreader(cities=[]):
   # TODO Implement the functionality to read from the 'cities.csv' file
   # For each city record, create a new City instance and add it to the
   # `cities` list
-	path = "./cities.csv"
-	file = open(path, newline='')
-	reader = csv.reader(file)
+    path = "./cities.csv"
+    file = open(path, newline='')
+    reader = csv.reader(file)
 
-	header = next(reader) #first line header
-	data = [row for row in reader] # read the data
-    
-	# return cities
-	print(data[0])
+    header = next(reader)  # first line header
+    # data = [row for row in reader] # read the data
+
+    # cities = []
+    for row in reader:
+        name = row[0]
+        latitude = float(row[3])
+        longitude = float(row[4])
+
+        cities.append(City((name), (latitude), (longitude)))
+        # g.append(Human((human.name.upper()), (human.age + 5)))
+
+    # print(cities)
+    return cities
 
 
 cityreader(cities)
