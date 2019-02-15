@@ -1,3 +1,5 @@
+# note: https://stackoverflow.com/questions/2681243/how-should-i-declare-default-values-for-instance-variables-in-python/2681286
+
 # To the GroundVehicle class, add method drive() that returns "vroooom".
 #
 # Also change it so the num_wheels defaults to 4 if not specified when the
