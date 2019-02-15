@@ -26,7 +26,12 @@ class GroundVehicle():
 
 class Motorcycle(GroundVehicle):
     def __init__(self, num_wheels=None):
+        # auto sets the number of wheels to 2
         super().__init__(num_wheels=2)
+
+    def drive(self): #method overriding
+        super().drive()
+        return("BRAAAP!!")
 
 
 vehicles = [
