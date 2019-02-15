@@ -6,11 +6,16 @@
 # object is constructed.
 
 class GroundVehicle():
-    def __init__(self, num_wheels=None):  # set attribute to None
-        if num_wheels is None:
-            num_wheels = 4
-
+    def __init__(self, num_wheels=4):  # set attribute to None
         self.num_wheels = num_wheels
+
+
+    # def __init__(self, num_wheels=None):  # set attribute to None
+    #     if num_wheels is None:
+    #         num_wheels = 4
+
+    #   self.num_wheels = num_wheels
+
 
     # TODO
     def drive(self):
@@ -27,9 +32,9 @@ class GroundVehicle():
 # TODO
 
 class Motorcycle(GroundVehicle):
-    def __init__(self, num_wheels=None):
+    def __init__(self, num_wheels=2):
         # auto sets the number of wheels to 2
-        super().__init__(num_wheels=2)
+        super().__init__(num_wheels)
 
     def drive(self): #method overriding
         super().drive()
