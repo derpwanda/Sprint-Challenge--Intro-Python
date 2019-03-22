@@ -12,7 +12,7 @@ class City:
 # https://www.codecademy.com/en/forum_questions/551c137f51b887bbc4001b73
 
     def __repr__(self):
-        return f'<City: "{self.name}", {self.lat}, {self.lon}>'
+        return f'City: "{self.name}", {self.lat}, {self.lon}'
 
     # def __repr__(self):
     #     return f'<City: "{self.name}", {self.lat}, {self.lon}>'
